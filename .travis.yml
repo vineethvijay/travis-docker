@@ -4,6 +4,7 @@ services:
   - docker
 
 before_install:
+- docker --version
 - docker pull docker pull vineethvijay/web1
 - docker run -itd vineethvijay/web1 --name test1
 - docker ps -a
