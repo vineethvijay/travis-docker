@@ -6,10 +6,10 @@ services:
 before-install:
 - echo "test here"
 
-script:
-- echo "this might work"
-- docker --version
+install:
 - docker pull vineethvijay/web1
 - docker run  --name test1 -itd vineethvijay/web1
+
+script:
 - docker ps -a
 - docker exec -it test1 /bin/sh -c "service apache2 status"
