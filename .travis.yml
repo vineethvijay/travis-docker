@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+- docker pull docker pull vineethvijay/web1
+- docker run -itd vineethvijay/web1 --name test1
+- docker ps -a
+- docker exec -it test1 /bin/sh -c "service apache2 status"
