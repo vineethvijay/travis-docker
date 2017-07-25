@@ -3,7 +3,7 @@ sudo: required
 services:
   - docker
 
-steps:
+before-install:
 - docker --version
 - docker pull vineethvijay/web1
 - docker run  --name test1 -itd vineethvijay/web1
