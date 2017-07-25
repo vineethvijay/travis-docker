@@ -9,3 +9,6 @@ before-install:
 - docker run  --name test1 -itd vineethvijay/web1
 - docker ps -a
 - docker exec -it test1 /bin/sh -c "service apache2 status"
+
+script:
+- service apache2 status
