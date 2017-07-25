@@ -11,4 +11,4 @@ before-install:
 - docker exec -it test1 /bin/sh -c "service apache2 status"
 
 script:
-- service apache2 status
+- echo "WTH"
